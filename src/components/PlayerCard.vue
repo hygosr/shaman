@@ -80,7 +80,7 @@ export default {
   width: 260px;
   height: 350px;
   margin: 10px;
-  display: inline-block;
+  //  display: inline-block;
   margin-bottom: 40px;
   margin-top: 40px;
   margin-left: 40px;
