@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "name": "Maarten",
+    "defense": 4,
+    "attack": 2,
+    "cardio": 2,
+    "lead": 2,
+    "picture": "maarten.jpeg",
+    "country": "nl"
+  },
+  {
+    "id": 2,
+    "name": "Hyguinho",
+    "defense": 4,
+    "attack": 4,
+    "cardio": 3,
+    "lead": 5,
+    "picture": "hyguinho.jpeg",
+    "country": "br"
+  },
+  {
+    "id": 3,
+    "name": "Virgil Van Dijk",
+    "defense": 5,
+    "attack": 1,
+    "cardio": 4,
+    "lead": 5,
+    "picture": "van.png",
+    "country": "nl"
+  },
+  {
+    "id": 4,
+    "name": "Hector",
+    "defense": 5,
+    "attack": 3,
+    "cardio": 5,
+    "lead": 5,
+    "picture": "hector.jpeg",
+    "country": "ve"
+  },
+  {
+    "id": 5,
+    "name": "Gustavo (Gus)",
+    "defense": 4,
+    "attack": 3,
+    "cardio": 5,
+    "lead": 5,
+    "picture": "gustavo.jpeg",
+    "country": "ve"
+  },
+  {
+    "id": 6,
+    "name": "Rubens",
+    "defense": 5,
+    "attack": 4,
+    "cardio": 4,
+    "lead": 4,
+    "picture": "rubens.jpeg",
+    "country": "pe"
+  },
+  {
+    "id": 8,
+    "name": "Maradona",
+    "defense": 3,
+    "attack": 5,
+    "cardio": 5,
+    "lead": 1,
+    "picture": "default.jpg",
+    "country": "ar"
+  },
+  {
+    "id": 89,
+    "name": "Messi",
+    "defense": 3,
+    "attack": 5,
+    "cardio": 1,
+    "lead": 1,
+    "picture": "messi.png",
+    "country": "ar"
+  },
+  {
+    "id": 97,
+    "name": "ronaldo",
+    "defense": 2,
+    "attack": 2,
+    "cardio": 2,
+    "lead": 1,
+    "picture": "default.jpg",
+    "country": "br"
+  },
+  {
+    "id": 110,
+    "name": "ronaldinho",
+    "defense": 1,
+    "attack": 5,
+    "cardio": 5,
+    "lead": 2,
+    "picture": "default.jpg",
+    "country": "br"
+  }
+]
