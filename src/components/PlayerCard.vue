@@ -74,9 +74,7 @@ export default {
 .md-card {
   width: 220px;
   height: 280px;
-  margin: 14px;
-  margin-left: 25px;
-
+  margin: 15px;
   border-width: 3px;
   border-style: solid;
   background-image: url("../assets/card.png");
@@ -94,18 +92,17 @@ export default {
   opacity: 1;
   margin-top: -45px;
 }
-
 .md-card .md-title {
   font-size: 60px;
   color: black;
   margin-bottom: 15px;
-  margin-left: -2px;
+  margin-left: -6px;
 }
-
 .skillsPanel {
   color: black;
   margin-top: 30px;
   font-size: 24px;
+  margin-left: -10px;
 }
 .md-layout-item-left {
   border-right: 1px brown solid;

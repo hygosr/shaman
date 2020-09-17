@@ -1,11 +1,6 @@
 <template>
   <div>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-
     <div class="md-layout">
-      <div class="md-layout-item md-layout-item-left">
-        <img src="../assets/logo.png" />
-      </div>
       <div class="md-layout-item">
         <md-button class="sh-bottom" v-on:click.native="handleClick">{{ shaman_text }}</md-button>
       </div>

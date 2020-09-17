@@ -14,10 +14,9 @@
       </div>
     </div>
     <div v-else>
-      <div
-        class="md-layout"
-        v-if="numberPlayers >= 1"
-      >Pick at least {{ numberPlayers }} players on the list:</div>
+      <div class="md-layout" v-if="numberPlayers >= 1">
+        <strong>Pick at least {{ numberPlayers }} players on the list:</strong>
+      </div>
       <h1 class="sh-pick" v-else />
       <div class="md-layout">
         <PlayerCard v-for="player in playerData" v-bind:key="player.id" v-bind:player="player" />
