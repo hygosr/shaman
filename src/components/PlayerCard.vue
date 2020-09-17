@@ -74,7 +74,9 @@ export default {
 .md-card {
   width: 220px;
   height: 280px;
-  margin: 10px;
+  margin: 14px;
+  margin-left: 25px;
+
   border-width: 3px;
   border-style: solid;
   background-image: url("../assets/card.png");
@@ -112,9 +114,9 @@ export default {
   background-color: greenyellow;
   text-align: center;
   align-items: center;
-  padding: 35px;
-  top: -35px;
-  left: -35px;
+  padding: 25px;
+  top: -25px;
+  left: -25px;
   font-size: 24px;
   font-weight: bold;
 }
