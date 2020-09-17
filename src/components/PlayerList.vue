@@ -14,12 +14,14 @@
       </div>
     </div>
     <div v-else>
-      <h1
-        class="sh-pick"
+      <div
+        class="md-layout"
         v-if="numberPlayers >= 1"
-      >Pick at least {{ numberPlayers }} players on the list</h1>
+      >Pick at least {{ numberPlayers }} players on the list:</div>
       <h1 class="sh-pick" v-else />
-      <PlayerCard v-for="player in playerData" v-bind:key="player.id" v-bind:player="player" />
+      <div class="md-layout">
+        <PlayerCard v-for="player in playerData" v-bind:key="player.id" v-bind:player="player" />
+      </div>
     </div>
   </div>
 </template>
@@ -61,11 +63,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.sh-pick {
-  margin-bottom: 1px;
-  bottom: 10px;
-  font-size: 42px;
-  font-weight: bold;
+.md-layout {
+  justify-content: center;
+  font-size: 24px;
+  margin-top: 25px;
 }
 .md-layout-item.team1 {
   border: white;

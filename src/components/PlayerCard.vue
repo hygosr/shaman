@@ -14,19 +14,14 @@
     <md-ripple>
       <md-card-header>
         <md-card-header-text>
-          <div class="md-title" :style="{marginTop: '22px'}">{{ player.skills }}</div>
-          <country-flag
-            v-bind:country="player.country"
-            size="big"
-            v-bind:rounded="true"
-            :style="{marginTop: '25px', marginLeft: '5px'}"
-          />
+          <div class="md-title">{{ player.skills }}</div>
+          <country-flag v-bind:country="player.country" size="big" v-bind:rounded="true" />
         </md-card-header-text>
 
         <md-card-media md-big>
           <img
             :src="require('../assets/pics/' + player.picture)"
-            :style="{width: '130px', height: '130px'}"
+            :style="{width: '100px', height: '100px', marginLeft: '-50px'}"
           />
         </md-card-media>
       </md-card-header>
@@ -77,13 +72,9 @@ export default {
 
 <style lang="scss" scoped>
 .md-card {
-  width: 260px;
-  height: 350px;
+  width: 220px;
+  height: 280px;
   margin: 10px;
-  //  display: inline-block;
-  margin-bottom: 40px;
-  margin-top: 40px;
-  margin-left: 40px;
   border-width: 3px;
   border-style: solid;
   background-image: url("../assets/card.png");
@@ -95,23 +86,23 @@ export default {
   opacity: 0.9;
 }
 .md-card .md-subhead {
-  font-family: "Roboto";
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 500;
   color: black;
   opacity: 1;
-  margin-top: -6px;
+  margin-top: -45px;
 }
+
 .md-card .md-title {
-  font-family: "Roboto";
   font-size: 60px;
   color: black;
-  text-align: center;
-  top: 20px;
+  margin-bottom: 15px;
+  margin-left: -2px;
 }
+
 .skillsPanel {
   color: black;
-  margin-top: 45px;
+  margin-top: 30px;
   font-size: 24px;
 }
 .md-layout-item-left {
@@ -127,11 +118,10 @@ export default {
   font-size: 24px;
   font-weight: bold;
 }
-
 .big-flag {
-  transform: scale(1.3);
-  -ms-transform: scale(1.3);
-  -webkit-transform: scale(1.3);
-  -moz-transform: scale(1.3);
+  transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
 }
 </style>
