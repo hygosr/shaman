@@ -8,24 +8,28 @@
         </div>
         <div class="md-layout-item team2">
           <h1 class="sh-h-team2">TEAM2</h1>
-
           <PlayerCard v-for="player in team2" v-bind:key="player.id" v-bind:player="player" />
         </div>
       </div>
+      <back-to-top bottom="50px" right="100px" visibleoffset="-1">
+        <md-button class="md-raised md-primary">AGAIN</md-button>
+      </back-to-top>
     </div>
     <div v-else>
       <div class="md-layout" v-if="numberPlayers >= 1">
         <strong>Pick at least {{ numberPlayers }} players on the list:</strong>
+        <back-to-top bottom="50px" right="50px" visibleoffset="1200">
+          <md-button class="md-raised md-primary">TOP</md-button>
+        </back-to-top>
       </div>
-      <h1 class="sh-pick" v-else />
+      <div class="md-layout" v-else>
+        <back-to-top bottom="50px" right="150px" visibleoffset="-1">
+          <md-button class="md-raised md-primary">INVOKE</md-button>
+        </back-to-top>
+      </div>
       <div class="md-layout">
         <PlayerCard v-for="player in allPlayers" v-bind:key="player.id" v-bind:player="player" />
       </div>
-      <back-to-top bottom="50px" right="50px">
-        <button type="button" class="btn btn-info btn-to-top">
-          <p text="^"></p>
-        </button>
-      </back-to-top>
     </div>
   </div>
 </template>
