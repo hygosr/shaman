@@ -26,8 +26,8 @@ export default {
 }
 
 .football {
-  width: 90px;
-  margin-top: 200px;
-  margin-left: -40px;
+  width: 60px;
+  margin-top: 220px;
+  margin-left: -65px;
 }
 </style>

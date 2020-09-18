@@ -21,6 +21,7 @@
       <div class="md-layout">
         <PlayerCard v-for="player in playerData" v-bind:key="player.id" v-bind:player="player" />
       </div>
+      <a href="#top">back to top</a>
     </div>
   </div>
 </template>
