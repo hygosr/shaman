@@ -1,5 +1,4 @@
-<!-- ADD A TEST TO CHECK IF THE PLAYER LIST IS VALID SIZE BEFORE CALLING PLAYER TEAMS.. IF NOT VALID SIZE OR NOT EVEN NUMBER THEN DON
-DONT CALL PLAYER TEAMS ; SHOW A COUNT WITH THE AMOUNT OF PLAYER SELECTED SO FAR AND RED FOR BAD NUMBERS AND GREEN FOR GOOD ONES -->
+<!-- SHOW A COUNT WITH THE AMOUNT OF PLAYER SELECTED SO FAR AND RED FOR BAD NUMBERS AND GREEN FOR GOOD ONES -->
 <template>
   <div>
     <div v-if="shamanPowerInvoked">
@@ -22,11 +21,6 @@ DONT CALL PLAYER TEAMS ; SHOW A COUNT WITH THE AMOUNT OF PLAYER SELECTED SO FAR 
         <strong>Pick {{ 8 - numberPlayers }} or more players on the list:</strong>
         <back-to-top bottom="50px" right="50px" visibleoffset="1200">
           <md-button class="md-raised md-primary">TOP</md-button>
-        </back-to-top>
-      </div>
-      <div class="md-layout" v-else>
-        <back-to-top bottom="50px" right="50px" visibleoffset="-1">
-          <md-button class="md-raised md-primary">INVOKE</md-button>
         </back-to-top>
       </div>
       <div class="md-layout">

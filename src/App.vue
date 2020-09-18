@@ -3,16 +3,19 @@
     <img src="./assets/logo.png" />
     <img class="football" src="http://upload.wikimedia.org/wikipedia/en/e/ec/Soccer_ball.svg" />
     <PlayerList />
+    <PlayerTeams />
   </div>
 </template>
 
 <script>
 import PlayerList from "./components/PlayerList.vue";
+import PlayerTeams from "./components/PlayerTeams.vue";
 
 export default {
   name: "App",
   components: {
     PlayerList,
+    PlayerTeams,
   },
 };
 </script>

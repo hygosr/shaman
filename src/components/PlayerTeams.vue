@@ -1,3 +1,18 @@
+<template>
+  <div>
+    <back-to-top bottom="50px" right="150px" visibleoffset="-1">
+      <md-button class="md-raised md-primary">INVOKE</md-button>
+    </back-to-top>
+    <md-snackbar v-if="false" :md-position="center" :md-duration="40000">
+      <span class="sh-testing">
+        We need an even number of at least 8 players!
+        <span class="sh-smile">&#128549;</span>
+      </span>
+      <md-button class="md-primary" @click="showSnackbar = false">Alright!</md-button>
+    </md-snackbar>
+  </div>
+</template>
+
 <script>
 import store from "../store";
 import _ from "lodash";
