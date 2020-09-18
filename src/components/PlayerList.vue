@@ -1,3 +1,5 @@
+<!-- ADD A TEST TO CHECK IF THE PLAYER LIST IS VALID SIZE BEFORE CALLING PLAYER TEAMS.. IF NOT VALID SIZE OR NOT EVEN NUMBER THEN DON
+DONT CALL PLAYER TEAMS -->
 <template>
   <div>
     <div v-if="shamanPowerInvoked">
@@ -16,14 +18,14 @@
       </back-to-top>
     </div>
     <div v-else>
-      <div class="md-layout" v-if="numberPlayers >= 1">
-        <strong>Pick at least {{ numberPlayers }} players on the list:</strong>
+      <div class="md-layout" v-if="8 - numberPlayers >= 1">
+        <strong>Pick {{ 8 - numberPlayers }} or more players on the list:</strong>
         <back-to-top bottom="50px" right="50px" visibleoffset="1200">
           <md-button class="md-raised md-primary">TOP</md-button>
         </back-to-top>
       </div>
       <div class="md-layout" v-else>
-        <back-to-top bottom="50px" right="150px" visibleoffset="-1">
+        <back-to-top bottom="50px" right="50px" visibleoffset="-1">
           <md-button class="md-raised md-primary">INVOKE</md-button>
         </back-to-top>
       </div>
@@ -62,7 +64,7 @@ export default {
       return this.$store.state.team2;
     },
     numberPlayers() {
-      return 8 - _.size(this.$store.state.selectedPlayers);
+      return _.size(this.$store.state.selectedPlayers);
     },
   },
   components: {
@@ -90,7 +92,6 @@ export default {
   color: red;
   font-size: 24px;
 }
-
 .md-layout-item.team2 {
   border: white;
   border-style: solid;
@@ -99,7 +100,6 @@ export default {
   color: blue;
   font-size: 24px;
 }
-
 .sh-h-team2 {
   margin-top: 30px;
   margin-bottom: 1px;
@@ -113,7 +113,6 @@ export default {
   justify-content: center;
   font-size: 42px;
 }
-
 .sh-h-team1 {
   margin-top: 30px;
   margin-bottom: 1px;
