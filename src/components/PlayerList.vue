@@ -4,21 +4,18 @@
     <div v-if="shamanPowerInvoked">
       <div class="md-layout">
         <div class="md-layout-item team1">
-          <h1 class="sh-h-team1">TEAM1</h1>
+          <h1>TEAM1</h1>
           <PlayerCard v-for="player in team1" v-bind:key="player.id" v-bind:player="player" />
         </div>
         <div class="md-layout-item team2">
-          <h1 class="sh-h-team2">TEAM2</h1>
+          <h1>TEAM2</h1>
           <PlayerCard v-for="player in team2" v-bind:key="player.id" v-bind:player="player" />
         </div>
       </div>
-      <back-to-top bottom="50px" right="100px" visibleoffset="-1">
-        <md-button class="md-raised md-primary">AGAIN</md-button>
-      </back-to-top>
     </div>
     <div v-else>
-      <div class="md-layout" v-if="8 - numberPlayers >= 1">
-        <strong>Pick {{ 8 - numberPlayers }} or more players on the list:</strong>
+      <div class="md-layout">
+        <strong>Pick at least 8 players for the match:</strong>
         <back-to-top bottom="50px" right="50px" visibleoffset="1200">
           <md-button class="md-raised md-primary">TOP</md-button>
         </back-to-top>
@@ -78,46 +75,5 @@ export default {
   justify-content: center;
   font-size: 24px;
   margin-top: 25px;
-}
-.md-layout-item.team1 {
-  border: white;
-  border-style: solid;
-  border-width: 12px;
-  color: red;
-  font-size: 24px;
-}
-.md-layout-item.team2 {
-  border: white;
-  border-style: solid;
-  border-width: 12px;
-  border-left: none;
-  color: blue;
-  font-size: 24px;
-}
-.sh-h-team2 {
-  margin-top: 30px;
-  margin-bottom: 1px;
-  background-color: blue;
-  width: 180px;
-  height: 60px;
-  margin-left: 360px;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 42px;
-}
-.sh-h-team1 {
-  margin-top: 30px;
-  margin-bottom: 1px;
-  background-color: red;
-  width: 180px;
-  height: 60px;
-  margin-left: 360px;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 42px;
 }
 </style>

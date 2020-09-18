@@ -1,21 +1,20 @@
 <template>
   <div>
-    <back-to-top bottom="50px" right="150px" visibleoffset="-1">
-      <md-button class="md-raised md-primary">INVOKE</md-button>
+    <back-to-top
+      bottom="50px"
+      right="150px"
+      visibleoffset="-1"
+      v-if="numberPlayers >= 8 && numberPlayers % 2 == 0"
+    >
+      <md-button class="md-raised md-primary" v-on:click.native="invokeShamanPower">INVOKE</md-button>
     </back-to-top>
-    <md-snackbar v-if="false" :md-position="center" :md-duration="40000">
-      <span class="sh-testing">
-        We need an even number of at least 8 players!
-        <span class="sh-smile">&#128549;</span>
-      </span>
-      <md-button class="md-primary" @click="showSnackbar = false">Alright!</md-button>
-    </md-snackbar>
   </div>
 </template>
 
 <script>
 import store from "../store";
 import _ from "lodash";
+import BackToTop from "vue-backtotop";
 
 function playerSelector(team1, team2, players) {
   team1.push(_.first(players));
@@ -27,6 +26,17 @@ function playerSelector(team1, team2, players) {
 }
 
 export default {
+  computed: {
+    shamanPowerInvoked() {
+      return this.$store.state.shamanPowerInvoked;
+    },
+    numberPlayers() {
+      return _.size(this.$store.state.selectedPlayers);
+    },
+  },
+  components: {
+    BackToTop,
+  },
   methods: {
     invokeShamanPower() {
       const weekPlayers = [];
