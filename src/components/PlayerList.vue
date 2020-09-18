@@ -1,5 +1,5 @@
 <!-- ADD A TEST TO CHECK IF THE PLAYER LIST IS VALID SIZE BEFORE CALLING PLAYER TEAMS.. IF NOT VALID SIZE OR NOT EVEN NUMBER THEN DON
-DONT CALL PLAYER TEAMS -->
+DONT CALL PLAYER TEAMS ; SHOW A COUNT WITH THE AMOUNT OF PLAYER SELECTED SO FAR AND RED FOR BAD NUMBERS AND GREEN FOR GOOD ONES -->
 <template>
   <div>
     <div v-if="shamanPowerInvoked">
@@ -125,18 +125,5 @@ export default {
   align-items: center;
   justify-content: center;
   font-size: 42px;
-}
-.md-icon {
-  background-color: blue;
-  color: blue;
-}
-.btn-to-top {
-  width: 60px;
-  height: 60px;
-  padding: 10px 16px;
-  border-radius: 50%;
-  font-size: 22px;
-  line-height: 22px;
-  background: blue;
 }
 </style>

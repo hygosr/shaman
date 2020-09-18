@@ -20,7 +20,7 @@
 
         <md-card-media md-big>
           <img
-            :src="require('../assets/pics/' + player.picture)"
+            :src="require('../assets/players/pics/' + player.picture)"
             :style="{width: '100px', height: '100px', marginLeft: '-50px'}"
           />
         </md-card-media>

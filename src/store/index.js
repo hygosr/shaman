@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-import PlayersData from "../assets/players.json";
+import PlayersData from "../assets/players/players.json";
 
 Vue.use(Vuex);
 
