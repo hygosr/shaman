@@ -19,9 +19,13 @@
       </div>
       <h1 class="sh-pick" v-else />
       <div class="md-layout">
-        <PlayerCard v-for="player in playerData" v-bind:key="player.id" v-bind:player="player" />
+        <PlayerCard v-for="player in allPlayers" v-bind:key="player.id" v-bind:player="player" />
       </div>
-      <a href="#top">back to top</a>
+      <back-to-top bottom="50px" right="50px">
+        <button type="button" class="btn btn-info btn-to-top">
+          <p text="^"></p>
+        </button>
+      </back-to-top>
     </div>
   </div>
 </template>
@@ -29,6 +33,7 @@
 <script>
 import store from "../store";
 import PlayerCard from "./PlayerCard.vue";
+import BackToTop from "vue-backtotop";
 import _ from "lodash";
 
 export default {
@@ -36,6 +41,11 @@ export default {
     _.forEach(store.state.allPlayers, function (p) {
       p.skills = p.defense + p.attack + p.cardio + p.lead;
     });
+  },
+  methods: {
+    scrollToTop() {
+      window.scrollTo(0, 0);
+    },
   },
   computed: {
     shamanPowerInvoked() {
@@ -53,10 +63,11 @@ export default {
   },
   components: {
     PlayerCard,
+    BackToTop,
   },
   data() {
     return {
-      playerData: store.state.allPlayers,
+      allPlayers: store.state.allPlayers,
     };
   },
 };
@@ -111,5 +122,18 @@ export default {
   align-items: center;
   justify-content: center;
   font-size: 42px;
+}
+.md-icon {
+  background-color: blue;
+  color: blue;
+}
+.btn-to-top {
+  width: 60px;
+  height: 60px;
+  padding: 10px 16px;
+  border-radius: 50%;
+  font-size: 22px;
+  line-height: 22px;
+  background: blue;
 }
 </style>
